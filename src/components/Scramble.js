@@ -5,20 +5,15 @@ import {
   Typography,
   CardActions,
   Button,
-  CardMedia,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import clipboard from 'clipboard-polyfill';
-import { cubeImageUrl } from '../lib/url';
 import { green } from '@material-ui/core/colors';
+import CubeImage from './CubeImage';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-  },
-  cubeImage: {
-    minHeight: 150,
-    minWidth: 150,
   },
   contentWrapper: {
     display: 'flex',
@@ -36,7 +31,6 @@ function Scramble({ scramble, number, eventId }) {
   const classes = useStyles();
   const [copied, setCopied] = useState(false);
   const line = `${number}. ${scramble}`;
-  const imageUrl = cubeImageUrl(eventId, scramble);
 
   useEffect(() => {
     setCopied(false);
@@ -48,7 +42,7 @@ function Scramble({ scramble, number, eventId }) {
 
   return (
     <Card className={classes.root}>
-      {imageUrl && <CardMedia className={classes.cubeImage} image={imageUrl} />}
+      <CubeImage eventId={eventId} alg={scramble} size={150} />
       <div className={classes.contentWrapper}>
         <CardContent className={classes.content}>
           <Typography variant="subtitle1">{line}</Typography>
