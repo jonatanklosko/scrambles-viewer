@@ -16,6 +16,7 @@ function CubeImage({ eventId = '333', alg = null, size = 150 }) {
       '333': 3,
       '333oh': 3,
       '333bf': 3,
+      '333fm': 3,
       '444': 4,
       '555': 5,
       '666': 6,

@@ -17,7 +17,7 @@ function ScrambleSet({ scrambleSet }) {
           <Scramble
             scramble={scramble}
             number={`${index + 1}`}
-            eventId={scrambleSet.event}
+            eventId={scrambleSet.eventId}
           />
         </Grid>
       ))}
@@ -29,7 +29,7 @@ function ScrambleSet({ scrambleSet }) {
           <Scramble
             scramble={scramble}
             number={`E${index + 1}`}
-            eventId={scrambleSet.event}
+            eventId={scrambleSet.eventId}
           />
         </Grid>
       ))}

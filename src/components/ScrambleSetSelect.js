@@ -9,7 +9,7 @@ function ScrambleSetSelect({ scrambleSets, value, onChange }) {
       onChange={(event) => onChange(event.target.value)}
     >
       {scrambleSets.map((scrambleSet) => (
-        <MenuItem key={scrambleSet.scrambleSetId} value={scrambleSet}>
+        <MenuItem key={scrambleSet.id} value={scrambleSet}>
           {scrambleSet.title}
         </MenuItem>
       ))}
